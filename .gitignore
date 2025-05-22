@@ -1,0 +1,12 @@
+cat > .gitignore <<'EOF'
+# Ignore OS/editor junk
+*.swp
+*.bak
+*.tmp
+
+# Ignore generated logs and summaries
+wifi_test_logs/
+*.iperf
+*.ping
+24h_summary_results.txt
+EOF

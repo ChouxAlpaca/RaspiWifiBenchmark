@@ -1,0 +1,13 @@
+[Unit]
+Description=24h Wi-Fi throughput & ping test (one-time)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/wifi24h_test.sh
+# Ensure the service doesn’t run beyond 24h (86400s):
+RuntimeMaxSec=86400
+Restart=no
+
+[Install]
+WantedBy=multi-user.target
